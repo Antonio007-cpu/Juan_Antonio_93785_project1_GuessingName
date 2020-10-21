@@ -7,6 +7,12 @@ for i in range(5):
     words.append(input("Enter word\n"))
 print("PLAYER 2")
 name = input("What is your name? ")
+reason = input("Why are you here? ")
+
+print("The reason your here is ", reason, "?")
+validation=input("Are you sure?")
+
+
  
 print("Good Luck ! ", name)
  
