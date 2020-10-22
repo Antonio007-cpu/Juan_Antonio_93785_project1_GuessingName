@@ -1,0 +1,32 @@
+# Number Guessing Game with Functions
+import random
+import math
+
+def guessing():
+    lower = int(input("Enter Lower bound (from 1 to 5) : ")) 
+    upper = int(input("Enter Upper bound (from 90 to 100) : "))  
+    x = random.randint(lower, upper)
+    print("\n\tYou've only ", round(math.log(upper - lower + 1, 2))," chances to guess the integer!\n")
+ 
+    count = 0
+ 
+    while count < math.log(upper - lower + 1, 2):
+        count += 1
+     
+        guess = int(input("Guess a number:- ")) 
+     
+        if x == guess:  
+           print("Congratulations you did it in ", count, " try or tries.")
+           break
+        elif x > guess:
+           print("You guessed too low!")
+        elif x < guess:
+           print("You guessed too high!")
+ 
+
+    if count >= math.log(upper - lower + 1, 2):
+        print("\nThe number is %d"%x)
+        print("\tBetter Luck Next time!")
+ 
+
+guessing()
